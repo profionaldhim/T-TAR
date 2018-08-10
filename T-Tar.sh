@@ -77,8 +77,8 @@ echo -e $red '+++++++++++++++++++++++++++++++++++++++++++'
 
 echo -e $yellow '#####################'
 read namebackup
-cd $frompath
-tar -cvzf $topath/$namepath  $frompath
+#cd /$frompath
+tar -cvzf /$topath/$namebackup  /$frompath
 clear
 echo ""
 echo "" 
@@ -86,7 +86,6 @@ echo ""
 bash T-Tar.sh
 fi 
 
-read name
 if [ $name = 2 ]
 then 
 clear
@@ -126,12 +125,12 @@ echo -e $red '+++++++++++++++++++++++++++++++++++++++++++'
 
 echo -e $yellow '#####################'
 read namebackup2
-cd $recoverypath
+cd /$recoverypath
 
 tar -xvzf /$backuppath/$namebackup2
 bash T-Tar.sh
 fi 
-read name
+
 if [ $name = 0 ]
 then 
 clear
